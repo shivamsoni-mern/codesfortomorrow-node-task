@@ -7,7 +7,7 @@ const { generateAccessToken, generateRefreshToken } = require("../utils/jwtUtils
 exports.register = async (req, res) => {
     try {
         const { firstName, lastName, email, password } = req.body;
-        if(!firstname || !lastname || email || !password){
+        if(!firstname || !lastname || !email || !password){
             throw new Error("please fill all the details")
         }
         
